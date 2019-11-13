@@ -1,8 +1,6 @@
-FROM // figure out what image to use
+FROM rust:1.3.1
 
 WORKDIR /usr/src/app
-COPY // libraries in host already? to . 
-RUN // install libraries
-COPY . .  // app source code from where?
+COPY . . 
+RUN cargo install --path .
 
-CMD [ commands I want the container to support] // metadata
